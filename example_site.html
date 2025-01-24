@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticiana's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.png') no-repeat center center/cover;
+            color: rgb(202, 195, 195);
+            text-align: center;
+            backdrop-filter: invert(5%);
+        }
+        .hero {
+            padding: 50px;
+        }
+        .headshot {
+            width: 200px;
+            height: 200px;
+            border-width: 20px;
+            border-style: inherit;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+        #projects, #contact {
+            margin: 50px 0;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.123);
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        form input, form textarea {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(147, 93, 93, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.695);
+        }
+        button {
+            background: #ff7e5f;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="images/headshot.jpg" alt="Ticiana's Headshot" class="headshot">
+            <h1>Hi, I'm Ticiana</h1>
+            <p>Software Engineer | Systems Engineer Intern</p>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Short description of the project.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Short description of the project.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! I will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
