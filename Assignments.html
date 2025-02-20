@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+        <link rel="stylesheet" href="styles.css">
+    
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body {
+                font-family: Arial, sans-serif;
+                background: url('images/minecraft_back.jpg') no-repeat center center/cover;
+                color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 20px;
+                text-align: center;
+                height: 100vh;
+                overflow: auto;
+                backdrop-filter: blur(5px);
+                background-attachment: fixed;
+                min-height: 100vh;
+                margin-top: 70px;
+            }
+            header {
+                width: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 15px 0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                text-align: center;
+                margin-top: -70px;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 10px;
+                transition: color 0.3s;
+            }
+            nav a:hover {
+                color: #5f77ff;
+            }
+            .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            }
+            button {
+            display: inline-block;
+            background: #ff7e5f;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            text-decoration: none;
+            }
+
+            .container{
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 20px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            table {
+                width: 80%;
+                max-width: 600px;
+                border-collapse: collapse;
+                background: rgba(255, 255, 255, 0.196);
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            th, td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background: #1e4a71;
+                color: white;
+                text-align: center;
+            }
+            tr:last-child td {
+                border-bottom: none;
+            }
+            td:nth-child(2), td:nth-child(3) {
+                text-align: center;
+            }
+            tbody tr:hover {
+                background: rgba(124, 95, 255, 0.1);
+            }
+        </style>
+    </head>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home_page.html">Home</a>
+            <a href="Human_Computer_Interactions.html">Human Computer Interactions</a>
+            <a href="Assignments.html">Assignments</a>
+        </nav>
+    </header>
+    </header>
+    </div>
+    <div class="container">
+        <h1><b>Assignments</b></h1>
+    </div>
+
+    <!-- Assignments Buttons-->
+    <div class="button-row">
+        <div class="container">
+            <nav><a href="ResearchPaper.hmtl" target="_blank" class="button">User & Problem Space Research Paper</a></nav>
+        </div>
+        <div class="container">
+            <nav><a href="Quizzes.html" target="_blank" class="button">Quizzes</a></nav>
+        </div>
+        <div class="container">
+            <nav><a href="TeamProjPhase1.html" target="_blank" class="button">Team Project Phase 1</a></nav>
+        </div>
+        <div class="container">
+            <nav><a href="TeamProjPhase2.html" target="_blank" class="button">Team Project Phase 2</a></nav>
+        </div>
+    </div>
+    
+    <!-- Assignments Table -->
+    <div class='container'><h2>Grading Breakdown</h2><br>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Type</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User & Problem Space Research Paper</td>
+                    <td>Individual</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>Quizzes (2)</td>
+                    <td>Individual</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>Team Project Phase 1: Concepting & Modeling</td>
+                    <td>Team</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>Team Project Phase 2: User Evaluation</td>
+                    <td>Team</td>
+                    <td>30%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticiana's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/background.png') no-repeat center center/cover;
+            color: rgb(202, 195, 195);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+            overflow:auto;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff7e5f;
+        }
+        .content {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 120px; /* Increased space for header */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .headshot {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto 30px;
+            border-width: 20px;
+            border-style: groove;
+            border-color: rgba(136, 70, 59, 0.632);
+            border-spacing: 10px;
+        }
+        #about, #contact, #skills {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .toggle-button {
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: color 0.3s;
+            font-weight: bold;
+            font-size: 30px;
+            background: none;
+        }
+        /* Button Hover Change color */
+        .toggle-button:hover {
+            color: #ff5733;
+        }
+        /* About Me Slide Open */
+        .expandable {
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            max-height: 0;
+            padding: 0 1em;
+        }
+        .expandable.show {
+            max-height: 500px;
+            padding: 1em;
+            color: rgb(226, 226, 226);
+
+        /* Contact Info */
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-links a {
+            background-color: #ff7e5f;
+            border-radius: 60%;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .social-links a:hover {
+            background-color: #ff5733;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form input, form textarea {
+            width: 90%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(235, 233, 233, 0.103);
+            border: 2px solid rgba(255, 255, 255, 0.695);
+        }
+        button {
+            background: #ff7e5f;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home_page.html">Home</a>
+            <a href="Human_Computer_Interactions.html">Human Computer Interactions</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <!-- Headshot Container -->
+        <img src="images/headshot.jpg" alt="Ticiana's Headshot" class="headshot">
+        <div class="container">
+            <h1><b>Hi, I'm Ticiana Ward</b></h1>
+            <p><b>Student | Systems Engineer Intern</b></p>
+            <p><b>Computer Science Student at Georgia State University</b></p>
+        </div>
+        <!-- Education Container -->
+        <div class="container">
+            <h2><b>Education:</b></h2>
+            <p><b>Bachelor of Science in Computer Science - Graduation Year 2026</b></p>
+            <p><b>Georgia State University, Atlanta, GA</b></p>
+        </div>
+        
+        <!-- About Me Container -->
+        <div class="container">
+            <div id="about">
+                <button class="toggle-button" id="toggle-about">About Me</button>
+                <div class="expandable" id="about-content">
+                    <p>Hello! I am <b>Ticiana Ward (tee-tsee-yah-nah)</b>, a highly motivated and detail-oriented Computer Science student passionate about <b>software engineering, full-stack deveiopment and AI systems.</b></p>
+                    <p>At <b>InComm Payments</b>, I gained hands-on experience in <b>real-world batch operations</b>, leveraging <b>Python for automation and data processing.</b></p>
+                    <br>
+                    <p>I also enjoy diving into creative pursuits like digital and traditional art, particularly using Procreate, as well as traditional pencil and paper drawing.</p>
+                    <p>I enjoy expressing my creativity visually, which complements my interest in Human-Computer Interaction and front-end development.</p>
+                    <p>I am eager to apply my <b>problem-solving skills, technical knowledge, and to explore front-end and full-stack development to expand my technical and design skills.</b></p>
+                    <p>Let’s connect and explore how we can create <b>meaningful technology solutions</b> together! 🚀</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="skills">
+                <h2><b>Skills</b></h2>
+                <p>• Software Development</p>
+                <p>• Python, Java, C, HTML, SQL</p>
+                <p>• Automation, Debugging, Logging</p>
+                <p>• XML, JSON, YAML</p>
+            </div>
+        </div>
+
+        <!--  -->
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <div class="social-links">
+                <a href="mailto:tward33@student.gsu.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ticiana-ward-23250b2b7/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/TCShu/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggle-about').addEventListener('click', function() {
+            document.getElementById('about-content').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
