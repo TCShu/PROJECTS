@@ -11,15 +11,15 @@
         body {
             font-family: Arial, sans-serif;
             background: url('images/background.png') no-repeat center center/cover;
-            color: rgb(202, 195, 195);
+            color: rgb(255, 255, 255);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             padding: 20px;
             text-align: center;
-            height: 100%;
-            overflow:auto;
+            overflow: auto;
+            backdrop-filter: blur(5px);
             background-attachment: fixed;
             min-height: 100vh;
         }
@@ -31,6 +31,8 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            text-align: center;
+            /* margin-top: -70px; */
         }
         nav {
             display: flex;
@@ -71,12 +73,12 @@
             border-color: rgba(136, 70, 59, 0.632);
             border-spacing: 10px;
         }
-        #about, #contact, #skills {
-            background: rgba(255, 255, 255, 0.2);
+        #contact {
+            background: rgba(0, 0, 0, 0.702);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 20px;
             margin: 20px auto;
-            width: 100%;
+            width:min-content;
         }
 
         .toggle-button {
@@ -92,24 +94,7 @@
             font-size: 30px;
             background: none;
         }
-        /* Button Hover Change color */
-        .toggle-button:hover {
-            color: #ff5733;
-        }
-        /* About Me Slide Open */
-        .expandable {
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-            max-height: 0;
-            padding: 0 1em;
-        }
-        .expandable.show {
-            max-height: 500px;
-            padding: 1em;
-            color: rgb(226, 226, 226);
-
-        /* Contact Info */
-        }
+    
         .social-links {
             display: flex;
             gap: 20px;
@@ -128,7 +113,7 @@
         .social-links a:hover {
             background-color: #ff5733;
         }
-        form {
+        /* form {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -142,7 +127,7 @@
             border-radius: 5px;
             background: rgba(235, 233, 233, 0.103);
             border: 2px solid rgba(255, 255, 255, 0.695);
-        }
+        } */
         button {
             background: #ff7e5f;
             border: none;
@@ -153,10 +138,11 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="home_page.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="Human_Computer_Interactions.html">Human Computer Interactions</a>
             <a href="#about">About Me</a>
             <a href="#contact">Contact</a>
@@ -180,27 +166,27 @@
         
         <!-- About Me Container -->
         <div class="container">
-            <div id="about">
-                <button class="toggle-button" id="toggle-about">About Me</button>
-                <div class="expandable" id="about-content">
-                    <p>Hello! I am <b>Ticiana Ward (tee-tsee-yah-nah)</b>, a highly motivated and detail-oriented Computer Science student passionate about <b>software engineering, full-stack deveiopment and AI systems.</b></p>
-                    <p>At <b>InComm Payments</b>, I gained hands-on experience in <b>real-world batch operations</b>, leveraging <b>Python for automation and data processing.</b></p>
-                    <br>
-                    <p>I also enjoy diving into creative pursuits like digital and traditional art, particularly using Procreate, as well as traditional pencil and paper drawing.</p>
-                    <p>I enjoy expressing my creativity visually, which complements my interest in Human-Computer Interaction and front-end development.</p>
-                    <p>I am eager to apply my <b>problem-solving skills, technical knowledge, and to explore front-end and full-stack development to expand my technical and design skills.</b></p>
-                    <p>Let’s connect and explore how we can create <b>meaningful technology solutions</b> together! 🚀</p>
-                </div>
+            <button class="toggle-button">About Me</button>
+            <div id="about-content">
+                <p>Hello! I am <b>Ticiana Ward (tee-tsee-yah-nah)</b>, a highly motivated and detail-oriented Computer Science student passionate about <b>software engineering, full-stack deveiopment and AI systems.</b></p>
+                <p>At <b>InComm Payments</b>, I gained hands-on experience in <b>real-world batch operations</b>, leveraging <b>Python for automation and data processing.</b></p>
+                <br>
+                <p>I also enjoy diving into creative pursuits like digital and traditional art, particularly using Procreate, as well as traditional pencil and paper drawing.</p>
+                <br>
+                <p>I enjoy expressing my creativity visually, which complements my interest in Human-Computer Interaction and front-end development.</p>
+                <p>I am eager to apply my problem-solving skills, technical knowledge, and to explore front-end and full-stack development to expand my technical and design skills.</p>
+                <br>
+                <p>Let’s connect and explore how we can create <b>meaningful technology solutions</b> together! 🚀</p>
             </div>
         </div>
         <div class="container">
-            <div id="skills">
+            
                 <h2><b>Skills</b></h2>
                 <p>• Software Development</p>
                 <p>• Python, Java, C, HTML, SQL</p>
                 <p>• Automation, Debugging, Logging</p>
                 <p>• XML, JSON, YAML</p>
-            </div>
+            
         </div>
 
         <!--  -->

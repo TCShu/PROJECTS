@@ -18,12 +18,11 @@
                 justify-content: flex-start;
                 padding: 20px;
                 text-align: center;
-                height: 100vh;
+                margin-top: 70px;
                 overflow: auto;
                 backdrop-filter: blur(5px);
                 background-attachment: fixed;
                 min-height: 100vh;
-                margin-top: 70px;
             }
             header {
                 width: 100%;
@@ -48,28 +47,9 @@
                 padding: 10px;
                 transition: color 0.3s;
             }
-            nav a:hover {
+            nav a:hover, .dropdown:hover .dropbtn {
                 color: #5f77ff;
             }
-            .button-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            }
-            button {
-            display: inline-block;
-            background: #ff7e5f;
-            border: none;
-            color: white;
-            padding: 15px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-            text-decoration: none;
-            }
-
             .container{
                 background: rgba(0, 0, 0, 0.7);
                 color: white;
@@ -77,6 +57,52 @@
                 margin: 20px;
                 border-radius: 10px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            /* The dropdown container */
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            
+            /* Dropdown button */
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 10px 15px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #000000c3;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: rgb(255, 255, 255);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            
+            /* Add a grey background color to dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+            
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
             }
             .table-container {
             display: flex;
@@ -117,31 +143,25 @@
 <body>
     <header>
         <nav>
-            <a href="home_page.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="Human_Computer_Interactions.html">Human Computer Interactions</a>
-            <a href="Assignments.html">Assignments</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="Assignments.html">Assignments</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="ResearchPaper.html">Research Paper</a>
+                    <a href="Quizzes.html" target="_blank" class="button">Reading Assignments</a>
+                    <a href="TeamProjPhase1.html" target="_blank" class="button">Team Project Phase 1</a>
+                    <a href="TeamProjPhase2.html" target="_blank" class="button">Team Project Phase 2</a>
+                </div>
+            </div>
         </nav>
     </header>
     </header>
     </div>
     <div class="container">
         <h1><b>Assignments</b></h1>
-    </div>
-
-    <!-- Assignments Buttons-->
-    <div class="button-row">
-        <div class="container">
-            <nav><a href="ResearchPaper.hmtl" target="_blank" class="button">User & Problem Space Research Paper</a></nav>
-        </div>
-        <div class="container">
-            <nav><a href="Quizzes.html" target="_blank" class="button">Quizzes</a></nav>
-        </div>
-        <div class="container">
-            <nav><a href="TeamProjPhase1.html" target="_blank" class="button">Team Project Phase 1</a></nav>
-        </div>
-        <div class="container">
-            <nav><a href="TeamProjPhase2.html" target="_blank" class="button">Team Project Phase 2</a></nav>
-        </div>
     </div>
     
     <!-- Assignments Table -->
@@ -157,22 +177,22 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>User & Problem Space Research Paper</td>
+                    <td><nav><a href="ResearchPaper.html" target="_blank" class="button-row">User & Problem Space Research Paper</a></td>
                     <td>Individual</td>
                     <td>20%</td>
                 </tr>
                 <tr>
-                    <td>Quizzes (2)</td>
+                    <td><nav><a href="Quizzes.html" target="_blank" class="button">Reading Assignments</a></nav></td>
                     <td>Individual</td>
                     <td>10%</td>
                 </tr>
                 <tr>
-                    <td>Team Project Phase 1: Concepting & Modeling</td>
+                    <td><nav><a href="TeamProjPhase1.html" target="_blank" class="button">Team Project Phase 1</a></nav></td>
                     <td>Team</td>
                     <td>30%</td>
                 </tr>
                 <tr>
-                    <td>Team Project Phase 2: User Evaluation</td>
+                    <td><nav><a href="TeamProjPhase2.html" target="_blank" class="button">Team Project Phase 2</a></nav></td>
                     <td>Team</td>
                     <td>30%</td>
                 </tr>

@@ -1,2 +1,140 @@
-<!-- Placeholder for Assignment-->
-Placeholder for User & Problem Space Research Paper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper: Enhancing Attention and Focus in Adults with ADHD</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/pink_minecraft_back.png') no-repeat center center/cover;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            text-align: center;
+            height: 100vh;
+            margin-top: 70px;
+            overflow: auto;
+            backdrop-filter: blur(5px);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: center;
+            margin-top: -70px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover, .dropdown:hover .dropbtn {
+            color: #dd81b5;
+        }
+        .container{
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        /* The dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000c3;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Human_Computer_Interactions.html">Human Computer Interactions</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="Assignments.html">Assignments</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="ResearchPaper.html">Research Paper</a>
+                    <a href="Quizzes.html" target="_blank" class="button">Reading Assignments</a>
+                    <a href="TeamProjPhase1.html" target="_blank" class="button">Team Project Phase 1</a>
+                    <a href="TeamProjPhase2.html" target="_blank" class="button">Team Project Phase 2</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="ResearchPaper">
+        <div class="container">
+            <h2><b>Research Audience or Problem Space Research Paper</b></h2>
+        </div>
+
+        <div class="container">
+            <embed src="Enhancing Attention and Focus in Adults with ADHD.pdf" type="application/pdf" width="100%" height="600px">
+        </div>
+    </div>
+</body>
+</html>
